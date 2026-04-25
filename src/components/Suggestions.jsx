@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const RANDOM_HANDLES = [
   "velvet_vibe",
@@ -41,8 +41,8 @@ const Suggestions = () => {
             />
           </div>
           <div className="flex flex-col">
-            <span className="text-[14px] font-bold text-white">intern_dev</span>
-            <span className="text-[14px] text-zinc-500">Frontend Intern</span>
+            <span className="text-[14px] font-bold text-white">dhh_hitz</span>
+            <span className="text-[14px] text-zinc-500">For the Hip-Hop</span>
           </div>
         </div>
         <button className="text-blue-500 text-[12px] font-bold">Switch</button>
