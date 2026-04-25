@@ -35,7 +35,9 @@ export class LeftSidebar extends Component {
           </Link>
 
           {/* Added Reels */}
-          <SiderbarItem logo={<Film size={26} />} label="Reels" />
+          <Link to="/reels">
+            <SiderbarItem logo={<Film size={26} />} label="Reels" />
+          </Link>
 
           <SiderbarItem logo={<MessageCircle size={26} />} label="Messages" />
 
@@ -51,20 +53,22 @@ export class LeftSidebar extends Component {
           <SiderbarItem logo={<BarChart3 size={26} />} label="Dashboard" />
 
           {/* PROFILE ITEM: Keeping your exact profile structure */}
-          <div className="flex items-center gap-4 cursor-pointer hover:bg-zinc-900 px-3 py-3 rounded-lg transition-colors overflow-hidden">
-            {/* Added w-[26px] and flex-shrink-0 to lock the size */}
-            <div className="w-[26px] h-[26px] flex-shrink-0 rounded-full bg-zinc-800 overflow-hidden border border-zinc-700">
-              <img
-                src="https://images.unsplash.com/photo-1584462746497-276f4aeb9fca?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                className="w-full h-full object-contain"
-                alt="profile"
-              />
+          <Link to="/profile">
+            <div className="flex items-center gap-4 cursor-pointer hover:bg-zinc-900 px-3 py-3 rounded-lg transition-colors overflow-hidden">
+              {/* Added w-[26px] and flex-shrink-0 to lock the size */}
+              <div className="w-[26px] h-[26px] flex-shrink-0 rounded-full bg-zinc-800 overflow-hidden border border-zinc-700">
+                <img
+                  src="https://images.unsplash.com/photo-1584462746497-276f4aeb9fca?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  className="w-full h-full object-contain"
+                  alt="profile"
+                />
+              </div>
+              {/* Only this span will animate/appear on hover */}
+              <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium whitespace-nowrap">
+                Profile
+              </span>
             </div>
-            {/* Only this span will animate/appear on hover */}
-            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium whitespace-nowrap">
-              Profile
-            </span>
-          </div>
+          </Link>
         </div>
 
         {/* BOTTOM SECTION: Keeping your exact gap-5 */}

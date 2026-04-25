@@ -112,7 +112,6 @@ const Feed = () => {
     }, 800);
   }, [page, isLoading, hasMore]);
 
-  // IntersectionObserver — fires loadMore when loader div enters viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

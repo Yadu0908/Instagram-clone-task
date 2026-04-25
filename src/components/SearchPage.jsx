@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Search, Play, MessageCircle } from "lucide-react";
 
 // Pool of images to cycle through
@@ -91,7 +91,7 @@ const SearchPage = () => {
       </div>
 
       {/* 2. INFINITE GRID (4 columns as requested) */}
-      <div className="grid grid-cols-4 gap-1 w-full max-w-[935px]">
+      <div className="grid grid-cols-3 gap-2 w-full max-w-[935px]">
         {posts.map((post) => (
           <div
             key={post.id}
@@ -117,16 +117,6 @@ const SearchPage = () => {
         {isLoading && (
           <div className="w-6 h-6 border-2 border-zinc-600 border-t-white rounded-full animate-spin" />
         )}
-      </div>
-
-      {/* 4. FLOATING MESSAGES */}
-      <div className="fixed bottom-4 right-4 bg-zinc-900 border border-zinc-800 rounded-2xl px-4 py-2 flex items-center gap-2 cursor-pointer hover:bg-zinc-800 transition-all z-50">
-        <MessageCircle size={20} />
-        <span className="text-sm font-semibold">Messages</span>
-        <div className="flex -space-x-2 ml-2">
-          <div className="w-6 h-6 rounded-full bg-zinc-700 border-2 border-black" />
-          <div className="w-6 h-6 rounded-full bg-zinc-600 border-2 border-black" />
-        </div>
       </div>
     </div>
   );

@@ -88,7 +88,7 @@ const Suggestions = () => {
       </div>
 
       {/* FOOTER (Simplified) */}
-      <div className="mt-10 text-[11px] text-zinc-500 flex flex-wrap gap-x-1.5 leading-4 uppercase">
+      <div className="navbar-div mt-10 text-[11px] text-zinc-500 flex flex-wrap gap-x-1.5 leading-4 uppercase">
         {["About", "Help", "Press", "API", "Jobs", "Privacy", "Terms"].map(
           (l) => (
             <span key={l} className="hover:underline cursor-pointer">

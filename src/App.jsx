@@ -3,7 +3,9 @@ import "./App.css";
 import Feed from "./components/Feed";
 import LeftSidebar from "./components/LeftSidebar";
 import Suggestions from "./components/Suggestions";
-import SearchPage from "./components/SearchPage"; // We will create this next
+import SearchPage from "./components/SearchPage";
+import ReelsPage from "./components/ReelsPage";
+import ProfilePage from "./components/ProfilePage";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
 
         {/* 2. MAIN CONTENT: Changes based on URL */}
         <main className="flex-1 h-full overflow-y-auto flex flex-col items-center custom-scrollbar">
-          <div className="w-full max-w-[935px] pt-4 lg:pt-10 px-0 md:px-4">
+          <div className="w-full max-w-[935px] h-full">
             <Routes>
               {/* Home Route */}
               <Route
@@ -35,7 +37,18 @@ function App() {
               />
 
               {/* Search/Explore Route */}
-              <Route path="/explore" element={<SearchPage />} />
+              <Route
+                path="/explore"
+                element={
+                  <div className="pt-4 lg:pt-10 px-4">
+                    {" "}
+                    {/* Padding added here */}
+                    <SearchPage />
+                  </div>
+                }
+              />
+              <Route path="/reels" element={<ReelsPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
             </Routes>
           </div>
         </main>
